@@ -69,6 +69,7 @@ function createMap(data) {
     map.addLayer(clusters);
     
     // *** HEAT MAP ***
+    
     var points = _.map(data.features, function(feature) {
         var lat = feature.geometry.coordinates[1];
         var lon = feature.geometry.coordinates[0];
@@ -79,6 +80,14 @@ function createMap(data) {
         minOpacity: 0.3
     });
     map.addLayer(heat);
+    
+    // *** LAYERS ***
+    
+    var layers = L.control.layers({
+        'Clusters': clusters,
+        'Heat Map': heat,
+        'Points': L.layerGroup(markers),
+    }).addTo(map);
 }
 
 // on page start
