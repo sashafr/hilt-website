@@ -68,8 +68,7 @@ function createMap(data) {
         clusters.addLayer(marker);
     });
     
-    // removed after layers were added
-    // map.addLayer(clusters);
+    map.addLayer(clusters);
     
     // *** HEAT MAP ***
     
