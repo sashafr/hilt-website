@@ -33,7 +33,9 @@ function createMap(data) {
         marker.bindPopup(feature.properties.toponym);
         
         markers.push(marker);
-        map.addLayer(marker);
+        
+        // removed after layers were added
+        // map.addLayer(marker);
     });
     
     // ***SLIDER***
@@ -66,7 +68,8 @@ function createMap(data) {
         clusters.addLayer(marker);
     });
     
-    map.addLayer(clusters);
+    // removed after layers were added
+    // map.addLayer(clusters);
     
     // *** HEAT MAP ***
     
@@ -79,7 +82,9 @@ function createMap(data) {
     var heat = L.heatLayer(points, {
         minOpacity: 0.3
     });
-    map.addLayer(heat);
+    
+    // removed after layers were added
+    // map.addLayer(heat);
     
     // *** LAYERS ***
     
